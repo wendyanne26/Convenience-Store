@@ -16,12 +16,17 @@ public class Manager extends Staff {
     }
 
     public void paySalaries(double amount) {
+        managerServices.paySalaries(amount);
 
     }
     public void hireCashier(List<Cashier> cashiers){
+        managerServices.hireCashier(cashiers);
+        for(Cashier eachCashier: cashiers ){
+            System.out.println("congratulations "+ eachCashier.getName()+ " your application has been approved");
+        }
 
     }
     public void fireCashier(Cashier cashier){
-
+        managerServices.fireCashier(cashier);
     }
 }

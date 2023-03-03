@@ -42,4 +42,14 @@ public class Store {
     public List<Cashier> getCashiers() {
         return cashiers;
     }
+
+    @Override
+    public String toString() {
+        return "Store{" +
+                "productsInStore=" + productsInStore +
+                ", name='" + name + '\'' +
+                ", storeAccount=" + storeAccount +
+                ", cashiers=" + cashiers +
+                '}';
+    }
 }

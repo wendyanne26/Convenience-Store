@@ -27,6 +27,15 @@ public class ManagerServiceImplementation implements ManagerServices {
 
     @Override
     public void fireCashier(Cashier cashier) {
-
+        Cashier cashierToFire = null;
+        for(Cashier eachCashier : store.getCashiers()){
+            if(eachCashier.getName().equals(cashier.getName())){
+                cashierToFire = eachCashier;
+                break;
+            }
+        }
+        store.getCashiers().remove(cashierToFire);
+        assert cashierToFire != null;
+        System.out.println(cashierToFire.getName()+" your services are no longer required.");
     }
 }
