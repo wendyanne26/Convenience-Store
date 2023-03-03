@@ -52,14 +52,37 @@ public class Model {
         System.out.println(customer2.getCustomerCart());
         customer3.selectProducts(product2, 5);
         customer4.selectProducts(product3, 10);
-//
+
         cashier.addCustomerToQueue(customer1);
         cashier.addCustomerToQueue(customer2);
         cashier.addCustomerToQueue(customer3);
         cashier.addCustomerToQueue(customer4);
-//
+
         System.out.println(cashier.getName() + " has started attending to the queue... ");
         cashier.attendToQueue();
-//        System.out.println("Size: " + customer1.getCustomerCart().size());
+        System.out.println("*************************** attending to customers by comparing cart size **************************************");
+        Customer customer5 = new Customer("Joy", 100000);
+        Customer customer6 = new Customer("John", 200000);
+        Customer customer7 = new Customer("Jessy", 100000);
+        Customer customer8 = new Customer("Juliet", 150000);
+
+        customer5.selectProducts(product1, 2);
+        customer5.selectProducts(product3, 2);
+
+        customer6.selectProducts(product, 4);
+        customer6.selectProducts(product3, 4);
+        customer6.selectProducts(product2, 4);
+
+        customer7.selectProducts(product2, 5);
+        customer8.selectProducts(product3, 10);
+
+        cashier1.addCustomerToQueue(customer5);
+        cashier1.addCustomerToQueue(customer6);
+        cashier1.addCustomerToQueue(customer7);
+        cashier1.addCustomerToQueue(customer8);
+
+        System.out.println(cashier.getName() + " has started attending to the queue... ");
+       cashier1.attendToQueue();
+
     }
 }
